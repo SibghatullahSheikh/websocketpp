@@ -4,7 +4,7 @@ BOOST_INCLUDE_PATH ?= $(BOOST_PREFIX)/include
 
 CPP11               ?= 
 
-CFLAGS = -Wall -O2 $(CPP11) -I$(BOOST_INCLUDE_PATH)
+CFLAGS = -Wall -g $(CPP11) -I$(BOOST_INCLUDE_PATH)
 LDFLAGS = -L$(BOOST_LIB_PATH)
 
 CXX		?= c++
