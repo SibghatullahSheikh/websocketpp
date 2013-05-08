@@ -42,6 +42,16 @@ public:
             con->send(msg->get_payload(),msg->get_opcode());
         }
     }
+
+    void on_open(connection_ptr con) {
+        // now it is safe to use the connection
+        std::cout << "connection ready" << std::endl;
+    }
+
+    void on_close(connection_ptr con) {
+        // no longer safe to use the connection
+        std::cout << "connection closed" << std::endl;
+    }
     
     void on_fail(connection_ptr con) {
         std::cout << "connection failed" << std::endl;
